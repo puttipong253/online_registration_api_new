@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request){
 
 Route::resource('customers','App\Http\Controllers\CustomersController');
 Route::resource('hotel','App\Http\Controllers\HotelController');
-Route::resource('room','RoomController');
+Route::resource('room','App\Http\Controllers\RoomController');
 
 Route::put('room-update-1', 'App\Http\Controllers\HotelController@RoomUpdate1');
 Route::put('room-update-2', 'App\Http\Controllers\HotelController@RoomUpdate2');
@@ -35,8 +35,8 @@ Route::post('partner','App\Http\Controllers\HotelController@partnerProvince');
 Route::get('matching','App\Http\Controllers\CustomersController@matching');
 Route::post('tracking','App\Http\Controllers\CustomersController@tracking');
 Route::post('check-phone','App\Http\Controllers\CustomersController@checkPhone');
-Route::post('provinceUserRoom1','App\Http\Controllers\CustomersController@provinceUserRoom1');
-Route::post('provinceUserRoom2','App\Http\Controllers\CustomersController@provinceUserRoom2');
+Route::post('provinceCustomerRoom1','App\Http\Controllers\CustomersController@provinceCustomerRoom1');
+Route::post('provinceCustomerRoom2','App\Http\Controllers\CustomersController@provinceCustomerRoom2');
 
 Route::get('countAllCustomer','App\Http\Controllers\CustomersController@countAllCustomer');
 Route::get('countCustomerMatch','App\Http\Controllers\CustomersController@countCustomerMatch');
