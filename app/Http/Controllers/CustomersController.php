@@ -64,7 +64,7 @@ class CustomersController extends Controller
     {
         return DB::table('customers')
                     ->leftjoin('hotels as h','customers.Customer_ID','=','h.Customer_ID')
-                    ->select('h.Hotel_ID','customers.Prefix','customers.Customer_ID','customers.F_Name as F_1','customers.L_Name as L_1','customers.Province','h.Check_In','h.Check_Out','h.Room_ID','Note')
+                    ->select('h.Hotel_ID','customers.Prefix','customers.Customer_ID','customers.F_Name as F_1','customers.L_Name as L_1','customers.Province','h.Check_In','h.Check_Out','h.Room_ID','h.Partner_ID','Note')
                     ->orderBy('h.Hotel_ID', 'ASC')
                     ->get();
     }
