@@ -43,6 +43,12 @@ class CustomersController extends Controller
                     ->where('Status','=',1)
                     ->count();
     }
+    public function countCustomerNoHotel(Request $request)
+    {
+        return DB::table('customers')
+                    ->where('Status','=',2)
+                    ->count();
+    }
     public function tracking(Request $request)
     {
         return DB::table('customers')

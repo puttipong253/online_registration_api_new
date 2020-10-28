@@ -42,3 +42,4 @@ Route::get('countAllCustomer','App\Http\Controllers\CustomersController@countAll
 Route::get('countCustomerMatch','App\Http\Controllers\CustomersController@countCustomerMatch');
 Route::get('countCustomerNotMatch','App\Http\Controllers\CustomersController@countCustomerNotMatch');
 Route::get('countCustomerRoom','App\Http\Controllers\RoomController@countCustomerRoom');
+Route::get('countCustomerNoHotel','App\Http\Controllers\CustomersController@countCustomerNoHotel');
